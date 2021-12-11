@@ -76,12 +76,3 @@ class Gfx {
       };
     };
 };
-
-int main() {
-  Gfx gfx;
-  gfx.color = 0xffffff;
-  gfx.str("hello", 2, 5);
-  gfx.line(1, 1, 2, 4);
-  
-  return 0;
-}
