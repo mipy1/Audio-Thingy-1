@@ -71,7 +71,10 @@ class Gfx {
       // the offset is there because it places spacing before the character
       int currWidth = -LETTER_SPACING;
       for (int i = 0; i < str.length(); i++) {
-        letter(str[i], currWidth + LETTER_SPACING, y);
+        // skip drawing letter if letter is a space
+        if (str[i] != " ") {
+          letter(str[i], currWidth + LETTER_SPACING, y);
+        };
         currWidth += (LETTER_WIDTH + LETTER_SPACING);
       };
     };
